@@ -20,18 +20,18 @@
   <table class="table table-bordered">
   <tr>
     <th>No.</th>
-    <th>Book Name</th>
-    <th>Book Serial</th>
-    <th>Book Writer</th>
-    <th>Book Price</th>
+    <th>Name</th>
+    <th>Serial</th>
+    <th>Writer</th>
+    <th>Price</th>
     <th width="280px">Action</th>
   </tr>
   @foreach ($books as $book)
   <tr>
     <td>{{ $loop->iteration }}</td>
-    <td>{{ $book->book_serial }}</td>
-    <td>{{ $book->book_writer }}</td>
-    <td>{{ $book->book_price }}</td>
+    <td>{{ $book->serial }}</td>
+    <td>{{ $book->writer }}</td>
+    <td>{{ $book->price }}</td>
     <td>
     <form  action="{{ route('books.destroy',$book->id) }}" method="POST">
     <a class="btn btn-info" href="{{ route('books.show',$book->id) }}">Show</a>

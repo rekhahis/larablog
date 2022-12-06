@@ -14,26 +14,26 @@
   <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-      <strong>Book Name:</strong>
-      {{ $book->bookname }}
+      <strong>Name:</strong>
+      {{ $book->name }}
     </div>
   </div>
    <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-      <strong>Book Serial:</strong>
-      {{ $book->book_serial }}
+      <strong>Serial:</strong>
+      {{ $book->serial }}
     </div>
   </div>
    <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-      <strong>Book Writer:</strong>
-      {{ $book->book_writer }}
+      <strong>Writer:</strong>
+      {{ $book->writer }}
     </div>
   </div>
    <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-      <strong>Book Price:</strong>
-      {{ $book->book_price }}
+      <strong>Price:</strong>
+      {{ $book->price }}
     </div>
   </div>
   </div>

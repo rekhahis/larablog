@@ -29,25 +29,25 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
       <div class="form-group">
       <strong>Book Name:</strong>
-      <input  type="text"  name="bookname"  class="form-control"  placeholder="Book Name">
+      <input  type="text"  name="name"  class="form-control"  placeholder="Book Name">
     </div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
       <strong>Book Serial:</strong>
-      <input type="text" class="form-control" name="book_serial"  placeholder="Book Serial">
+      <input type="text" class="form-control" name="serial"  placeholder="Book Serial">
     </div>
   </div>
    <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
       <strong>Book Writer:</strong>
-      <input type="text" class="form-control" name="book_writer"  placeholder="Book Writer">
+      <input type="text" class="form-control" name="writer"  placeholder="Book Writer">
     </div>
   </div>
    <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
       <strong>Book Price:</strong>
-      <input type="text" class="form-control" name="book_price"  placeholder="Book Price">
+      <input type="text" class="form-control" name="price"  placeholder="Book Price">
     </div>
   </div>
   <div  class="col-xs-12 col-sm-12 col-md-12 text-center">
