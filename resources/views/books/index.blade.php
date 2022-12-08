@@ -19,26 +19,28 @@
 
   <table class="table table-bordered">
   <tr>
-    <th>No.</th>
-    <th>Name</th>
-    <th>Serial</th>
-    <th>Writer</th>
-    <th>Price</th>
-    <th width="280px">Action</th>
+    <th width="50px">No.</th>
+    <th width="50px">Name</th>
+    <th width="50px">Serial</th>
+    <th width="50px">Writer</th>
+    <th width="50px">Price</th>
+    <th width="50px">Action</th>
   </tr>
   @foreach ($books as $book)
   <tr>
     <td>{{ $loop->iteration }}</td>
+    <td>{{ $book->name }}</td>
     <td>{{ $book->serial }}</td>
     <td>{{ $book->writer }}</td>
     <td>{{ $book->price }}</td>
     <td>
-    <form  action="{{ route('books.destroy',$book->id) }}" method="POST">
+    
     <a class="btn btn-info" href="{{ route('books.show',$book->id) }}">Show</a>
     <a class="btn btn-primary" href="{{ route('books.edit',$book->id) }}">Edit</a>
+    <form  action="{{ route('books.destroy',$book->id) }}" method="POST">
        @csrf
        @method('DELETE')
-     <button type="submit" class="btn btn-danger">Delete</button>
+      <button type="submit" class="btn btn-danger">Delete</button>
     </form>
     </td>
   </tr>

@@ -13,11 +13,8 @@ class BookController extends Controller
    */
   public  function index()
   {
-
     $books = Books::latest()->paginate(5);
-
-    return view('books.index')
-      ->with('books',$books);
+    return view('books.index')->with('books',$books);
 
   }
 
@@ -36,7 +33,7 @@ class BookController extends Controller
    *
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
-   */
+  */
 
   public  function store(Request $request) {
     $data = $request->validate([
@@ -58,10 +55,9 @@ class BookController extends Controller
    * @param  \App\Models\Books  $book
    * @return \Illuminate\Http\Response
    */
+
   public  function show(Books $book) {
-
       return view('books.show',compact('book'));
-
   }
 
   /**
@@ -69,11 +65,9 @@ class BookController extends Controller
    *
    * @param  \App\Models\Books  $book
    * @return \Illuminate\Http\Response
-   */
+  */
   public  function edit(Books $book) {
-
     return view('books.edit',compact('book'));
-
   }
 
   /**
@@ -90,23 +84,19 @@ class BookController extends Controller
       'writer' => 'required',
       'price' => 'required',
     ]);
-
     $book->update($data);
-    return redirect()->route('books.index')
-      ->with('success','Books updated successfully');
+    return redirect()->route('books.index')->with('success','Books updated successfully');
   }
 
   /**
- * Remove the specified resource from storage.
- *
- * @param  \App\Models\Books  $book
- * @return \Illuminate\Http\Response
- */
-  public  function destroy(Books $book) {
-
+   * Remove the specified resource from storage.
+   *
+   * @param  \App\Models\Books  $book
+   * @return \Illuminate\Http\Response
+  */
+  public function destroy(Books $book) {
     $book->delete();
-    return redirect()->route('books.index')
-      ->with('success','Books deleted successfully');
+    return redirect()->route('books.index')->with('success','Books deleted successfully');
   }
 
 }

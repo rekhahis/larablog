@@ -22,3 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('books',  BookController::class);
+Route::get('/Admin_dashboard', 'Admin\DashboardController@index')->middleware('role:admin');
+Route::get('/front_dashboard', 'front\DashboardController@index')->middleware('role:user');
+
