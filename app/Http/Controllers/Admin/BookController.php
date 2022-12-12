@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+
 use App\Models\Books;
 use Illuminate\Http\Request;
 
@@ -44,7 +47,7 @@ class BookController extends Controller
     ]);
     Books::create($data);
 
-    return redirect()->route('books.index')
+    return redirect()->route('admin.books.index')
       ->with('success','Books added successfully.');
 
   }
@@ -85,7 +88,7 @@ class BookController extends Controller
       'price' => 'required',
     ]);
     $book->update($data);
-    return redirect()->route('books.index')->with('success','Books updated successfully');
+    return redirect()->route('admin.books.index')->with('success','Books updated successfully');
   }
 
   /**
@@ -96,7 +99,7 @@ class BookController extends Controller
   */
   public function destroy(Books $book) {
     $book->delete();
-    return redirect()->route('books.index')->with('success','Books deleted successfully');
+    return redirect()->route('admin.books.index')->with('success','Books deleted successfully');
   }
 
 }

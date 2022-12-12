@@ -7,7 +7,7 @@
          <h2>Add New Book</h2>
       </div>
       <div class="pull-right">
-          <a class="btn btn-primary"  href="{{ route('books.index') }}"> Back</a>
+          <a class="btn btn-primary"  href="{{ route('admin.books.index') }}"> Back</a>
       </div>
   </div>
 </div>
@@ -23,7 +23,7 @@
   </div>
 @endif
 
-<form  action="{{ route('books.store') }}"  method="POST">
+<form  action="{{ route('admin.books.store') }}"  method="POST">
  @csrf
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">

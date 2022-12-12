@@ -7,7 +7,7 @@
       <h2>Show Book</h2>
     </div>
     <div  class="pull-right">
-      <a  class="btn btn-primary"  href="{{ route('books.index') }}"> Back</a>
+      <a  class="btn btn-primary"  href="{{ route('admin.books.index') }}"> Back</a>
     </div>
   </div>
   </div>

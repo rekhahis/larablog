@@ -7,7 +7,7 @@
        <h2>Laravel Shop | All Books</h2>
     </div>
     <div  class="pull-right">
-        <a  class="btn btn-success" href="{{ route('books.create') }}"> Create New Book</a>
+        <a  class="btn btn-success" href="{{ route('admin.books.create') }}"> Create New Book</a>
     </div>
   </div>
   </div>
@@ -35,9 +35,9 @@
     <td>{{ $book->price }}</td>
     <td>
     
-    <a class="btn btn-info" href="{{ route('books.show',$book->id) }}">Show</a>
-    <a class="btn btn-primary" href="{{ route('books.edit',$book->id) }}">Edit</a>
-    <form  action="{{ route('books.destroy',$book->id) }}" method="POST">
+    <a class="btn btn-info" href="{{ route('admin.books.show',$book->id) }}">Show</a>
+    <a class="btn btn-primary" href="{{ route('admin.books.edit',$book->id) }}">Edit</a>
+    <form  action="{{ route('admin.books.destroy',$book->id) }}" method="POST">
        @csrf
        @method('DELETE')
       <button type="submit" class="btn btn-danger">Delete</button>
